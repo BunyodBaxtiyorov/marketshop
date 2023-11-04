@@ -1,0 +1,199 @@
+swiper-container {
+  width: 600px;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 400px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+swiper-container {
+  /* width: 300px; */
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.swiper-button-next svg path,
+.swiper-button-prev svg path {
+  width: 10px;
+  position: relative;
+  right: 600px;
+}
+
+.mySwiper {
+  position: relative;
+  margin-right: 50px;
+  height: 80%;
+  /* width: 40%; */
+}
+
+.mySwiper2 {
+  width: 600px;
+  position: relative;
+  right: 300px;
+  bottom: 30px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.mySwiper2 img {
+  border-radius: 10px;
+}
+
+.mySwiper2 swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+swiper-slide img {
+  border-radius: 30px;
+  display: block;
+  width: 600px;
+  height: 100%;
+  object-fit: cover;
+}
+.dataswip {
+  display: flex;
+}
+.produc-text {
+  position: relative;
+  /* right: 50px; */
+}
+.Product-txt h1 {
+  width: 584px;
+  color: #000;
+  font-family: Archivo;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px; /* 125% */
+}
+.Product-txt p {
+  width: 598px;
+  color: #000;
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.product-about {
+  display: flex;
+}
+.product-about button {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.produc-btn {
+  position: relative;
+  top: 30px;
+  display: flex;
+  right: 5px;
+  width: 600px;
+}
+.produc-btn button {
+  display: inline-flex;
+  padding: 10px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  width: 180px;
+  height: 46px;
+  border-radius: 40px;
+  background: var(--foundation-orange-normal, #f26957);
+  margin-right: 60px;
+}
+.produc-btn button a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Archivo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+}
+:host {
+  --swiper-navigation-size: 24px;
+}
+
+.produc-elon {
+  display: flex;
+}
+.produc-elon img {
+  border-radius: 50%;
+}
+.produc-photo-text {
+  position: relative;
+  top: 5px;
+  left: 8px;
+}
+.produc-photo-text h4 {
+  width: 104px;
+  color: #000;
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+  margin: 0;
+}
+.produc-photo-text p {
+  width: 135px;
+  margin: 0;
+  color: #000;
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.warning-produc {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 12px;
+  background: var(--foundation-orange-light-active, #fbd1cb);
+  top: 62px;
+  right: 5px;
+}
+.warning-produc span {
+  color: #f94135;
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+}
+.warning-produc p {
+  color: #222;
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
