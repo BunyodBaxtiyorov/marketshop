@@ -1,3 +1,8 @@
+.swiper-button-next {
+  width: 10px;
+  background-color: orange;
+  height: 10px;
+}
 swiper-container {
   width: 600px;
   height: 100%;
@@ -28,11 +33,9 @@ swiper-slide {
   background-size: cover;
   background-position: center;
 }
-.swiper-button-next svg path,
-.swiper-button-prev svg path {
-  width: 10px;
-  position: relative;
-  right: 600px;
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: red;
 }
 
 .mySwiper {

@@ -339,9 +339,8 @@ Product
 }
 .Produc-card {
   display: flex;
-
-  background-color: red;
 }
+
 .Produc-card .card {
   display: flex;
   justify-content: center;
@@ -393,7 +392,7 @@ Product
   margin-bottom: 0;
 }
 .card-title p {
-  width: 177px;
+  width: 145px;
   color: var(--foundation-grey-normal, #232323);
   font-family: Archivo;
   font-size: 12px;
@@ -402,6 +401,7 @@ Product
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .btn-about {
   display: flex;
   padding: 4px 16px;

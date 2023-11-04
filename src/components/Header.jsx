@@ -25,7 +25,10 @@ export default function Header() {
         <div className="menu">
           <div className="all">
             <div className="img">
-              <img src={logo} className="h-img" alt="Tekin Market logo" />
+              <a href="/">
+                {" "}
+                <img src={logo} className="h-img" alt="Tekin Market logo" />
+              </a>
             </div>
             <div className="btn" href="/">
               <Modal />

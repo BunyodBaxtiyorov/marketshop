@@ -25,6 +25,7 @@ export default function Product() {
             title={item.name}
             dec={item.photos[0].name}
             region={item.region.name}
+            region1={item.district.name}
           />
         ))}
       </div>
