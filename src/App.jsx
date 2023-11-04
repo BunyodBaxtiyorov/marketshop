@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/components/home/index";
 import Productlist from "./components/productlist";
 import { useEffect, useState } from "react";
+import Main from "./components/main";
+// import Main from "./components/main";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,7 +27,7 @@ function App() {
           <Header />
           <Router>
             <Routes>
-              <Route exact path="/" element={<Home />} />
+              <Route exact path="/" element={<Main />} />
               <Route exact path="/product" element={<Productlist />} />
             </Routes>
           </Router>

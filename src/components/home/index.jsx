@@ -5,9 +5,7 @@ export default function () {
   return (
     <>
       <div className="Home">
-        <div className="container">
-          <Main />
-        </div>
+        <div className="container">{/* <Main /> */}</div>
       </div>
     </>
   );
