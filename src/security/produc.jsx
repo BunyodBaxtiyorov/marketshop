@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-export default function Produc({ title, region, photo, dec, region1 }) {
+export default function Produc({ title, region, photo, dec, region1, datas }) {
   const [data, setData] = useState([]);
   async function getData() {
     await axios
@@ -14,6 +14,7 @@ export default function Produc({ title, region, photo, dec, region1 }) {
     getData();
   }, []);
   console.log("malumot", data?.content);
+
   return (
     <div className="Produc">
       <div className="container">
@@ -32,6 +33,7 @@ export default function Produc({ title, region, photo, dec, region1 }) {
                     {region}
                     <span>{region1}</span>
                   </p>
+                  <p>{datas}</p>
                 </div>
                 <div className="btn-about">
                   <a href="/">eski</a>

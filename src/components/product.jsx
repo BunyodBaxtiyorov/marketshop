@@ -14,6 +14,10 @@ export default function Product() {
     getData();
   }, []);
   console.log("malumot", data?.content);
+  const uploadedAt = 1695657506511;
+  const date = new Date(uploadedAt);
+
+  console.log(date);
 
   return (
     <div className="Produc">
@@ -26,6 +30,7 @@ export default function Product() {
             dec={item.photos[0].name}
             region={item.region.name}
             region1={item.district.name}
+            // datas={date}
           />
         ))}
       </div>
