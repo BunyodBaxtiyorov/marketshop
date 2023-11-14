@@ -6,7 +6,7 @@ export default function Produc({ title, region, photo, dec, region1, datas }) {
   async function getData() {
     await axios
       .get(
-        "http://143.198.64.152:1777/api/product/v1?page=0&size=20&sortBy=id&sortDirection=DESC"
+        "http://143.198.64.152:1777/api/product/v1?page=0&size=20&sortBy=id&sortDirection=DESC/"
       )
       .then((res) => setData(res.data));
   }
@@ -21,7 +21,7 @@ export default function Produc({ title, region, photo, dec, region1, datas }) {
         <div className="Produc-card">
           <div className="card">
             <div className="card-frame">
-              <Link to={"/product"}>
+              <Link to={`/product/${[0].id}`}>
                 <div className="dev">
                   <img src={photo} alt={dec} />
                 </div>

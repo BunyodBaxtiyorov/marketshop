@@ -93,6 +93,8 @@ function Main() {
         </div>
         <hr />
         <Product />
+        <hr />
+        <h1 style={{ textAlign: "center" }}>Tekin Market Blog</h1>
       </div>
     </div>
   );

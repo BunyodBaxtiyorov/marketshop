@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/components/home/index";
 import Productlist from "./components/productlist";
 import { useEffect, useState } from "react";
-import Main from "./components/main";
+import Login from "./auth/login";
+import Register from "./auth/register";
 // import Main from "./components/main";
 
 function App() {
@@ -27,8 +28,10 @@ function App() {
           <Header />
           <Router>
             <Routes>
-              <Route exact path="/" element={<Main />} />
-              <Route exact path="/product" element={<Productlist />} />
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="product/:id" element={<Productlist />} />
+              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/register" element={<Register />} />
             </Routes>
           </Router>
         </div>
