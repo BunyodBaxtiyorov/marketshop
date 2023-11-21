@@ -14,6 +14,7 @@ import icon4 from "../img/user.png";
 import Modal from "./modal.jsx";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 export default function Header() {
   const { t, i18n } = useTranslation();
 
@@ -57,9 +58,9 @@ export default function Header() {
                 </li>
                 <li>
                   <img src={icon4} alt="" />
-                  <a className="ul-1" href="/login">
+                  <Link className="ul-1" to={"/login"}>
                     {t("description.Kirish")}
-                  </a>
+                  </Link>
                 </li>
                 <li className="h-a">
                   <a href="">
