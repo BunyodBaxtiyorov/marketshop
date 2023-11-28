@@ -49,7 +49,7 @@ export default function Header() {
                   <div className="Language">
                     <img src={icon3} alt="" />
                     <select name="" id="bb" onChange={handleLanguageChange}>
-                      <option value="en">O'zbekcha</option>
+                      <option value="en">O'zbek</option>
                       <option value="ru">Ruscha</option>
                     </select>
 
@@ -71,9 +71,13 @@ export default function Header() {
               </ul>
             </nav>
           </div>
-          <button className="h-a-1">
-            <a href="/">Qo‘llab quvvatlash</a>
+          <button className="h-a-1 btn-22">
+            <a href="/">{t("description.qol")}</a>
           </button>
+
+          {/* <main class="main">
+            <button class="btney">offet hover</button>
+          </main> */}
         </div>
       </div>
     </div>

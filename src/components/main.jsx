@@ -11,10 +11,12 @@ import logo1 from "../img/gr.png";
 import icon0 from "../img/search-normal.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Footer from "./footer";
 
 function Main() {
   const [regions, setRegions] = useState([]);
-
+  const { t } = useTranslation();
   async function fetchRegions() {
     try {
       const response = await axios.get(
@@ -78,7 +80,7 @@ function Main() {
             <div className="bn-hd">
               <div className="main-header">
                 <div className="main-text">
-                  <h1>Ehsonning Mukofati Ehson</h1>
+                  <h1>{t("description.ehson")}</h1>
                 </div>
                 <div className="main-h-input">
                   <select className="h-inp" name="" id="">
@@ -96,6 +98,7 @@ function Main() {
                   </select>
                   <img src={icon0} alt="" />{" "}
                   <input
+                    className="web-inp"
                     type="search"
                     name=""
                     id=""
@@ -153,8 +156,9 @@ function Main() {
         </div>
         <hr />
         <Product />
-        <hr />
-        <h1 style={{ textAlign: "center" }}>Tekin Market Blog</h1>
+        {/* <hr /> */}
+        {/* <h1 style={{ textAlign: "center" }}>Tekin Market Blog</h1> */}
+        <Footer />
       </div>
     </div>
   );
