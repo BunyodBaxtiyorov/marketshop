@@ -16,7 +16,11 @@ import Footer from "./footer";
 
 function Main() {
   const [regions, setRegions] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [districts, setDistricts] = useState([]);
+  const [blog, setBlog] = useState([]);
   const { t } = useTranslation();
+
   async function fetchRegions() {
     try {
       const response = await axios.get(
@@ -28,62 +32,57 @@ function Main() {
     }
   }
 
-  useEffect(() => {
-    fetchRegions();
-  }, []);
-
-  console.log("Viloyat", regions);
-  // fffffff
-  const [blog, setBlog] = useState([]);
-
   async function getBlog() {
     try {
       const response = await axios.get(
         "http://143.198.64.152:1777/api/category/v1"
       );
-      console.log("Response:", response); // Log the entire response for debugging
       setBlog(response.data.objectKoinot);
     } catch (error) {
       console.error("Error fetching Blog:", error);
     }
   }
 
+  async function fetchDistricts(regionName) {
+    try {
+      const response = await axios.get(
+        `http://143.198.64.152:1777/api/district/v1/all?regionName=${regionName}`
+      );
+      setDistricts(response.data?.objectKoinot?.content || []);
+    } catch (error) {
+      console.error("Error fetching districts:", error);
+    }
+  }
+
   useEffect(() => {
+    fetchRegions();
     getBlog();
   }, []);
 
-  console.log("malumotey", blog);
+  const handleRegionChange = async (e) => {
+    const selectedRegionValue = e.target.value;
+    setSelectedRegion(selectedRegionValue);
+    await fetchDistricts(selectedRegionValue);
+  };
+
   return (
     <div className="Main">
       <div className="container">
         <main>
           <div className="banner container">
-            {/* <div className="d-fl">
-<div className="ell">
- <img src={icon5} alt="" />
-              </div>
-              <div className="rec">
-                <img src={icon6} width={"230px"} alt="" />
-              </div>
-              <div className="c1">
-                <img src={icon7} alt="" />
-              </div>
-            </div>
-            <div className="d-fl-1">
-              <div className="c1-h">
-                <img src={icon8} alt="" />
-              </div>
-              <div className="c1-3">
-                <img height={"220px"} src={icon9} alt="" />
-              </div>
-            </div> */}
             <div className="bn-hd">
               <div className="main-header">
                 <div className="main-text">
                   <h1>{t("description.ehson")}</h1>
                 </div>
                 <div className="main-h-input">
-                  <select className="h-inp" name="" id="">
+                  <select
+                    className="h-inp"
+                    name="region"
+                    id="region"
+                    value={selectedRegion}
+                    onChange={handleRegionChange}
+                  >
                     <option value="region">Viloyat</option>
                     {regions.map((region) => (
                       <option key={region.id} value={region.name}>
@@ -91,12 +90,15 @@ function Main() {
                       </option>
                     ))}
                   </select>
-                  <select className="h-inp" name="" id="">
-                    <option value="option1">Shaxar</option>
-                    <option value="option1">Shaxar</option>
-                    <option value="option1">Shaxar</option>
+                  <select className="h-inp" name="district" id="district">
+                    <option value="">Tuman</option>
+                    {districts.map((data) => (
+                      <option key={data.id} value={data.name}>
+                        {data.name}
+                      </option>
+                    ))}
                   </select>
-                  <img src={icon0} alt="" />{" "}
+                  <img src={icon0} alt="" />
                   <input
                     className="web-inp"
                     type="search"
@@ -129,24 +131,6 @@ function Main() {
                   <p className="bedroom">{objectKoinot.nameUz}</p>
                 </Link>
               ))}
-              {/* <Link to={"/"} className="gr-t">
-                <img src={gr2} alt="" />
-              </Link>
-              <Link to={"/"} className="gr-t">
-                <img src={gr3} alt="" />
-              </Link>
-              <Link to={"/"} className="gr-t">
-                <img src={gr4} alt="" />
-              </Link>
-              <Link to={"/"} className="gr-t">
-                <img src={gr5} alt="" />
-              </Link>
-              <Link to={"/"} className="gr-t">
-                <img src={gr6} alt="" />
-              </Link>
-              <Link to={"/"} className="gr-t">
-                <img src={gr7} alt="" />
-              </Link> */}
             </div>
           </div>
         </main>
@@ -156,8 +140,6 @@ function Main() {
         </div>
         <hr />
         <Product />
-        {/* <hr /> */}
-        {/* <h1 style={{ textAlign: "center" }}>Tekin Market Blog</h1> */}
         <Footer />
       </div>
     </div>

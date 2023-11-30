@@ -213,6 +213,7 @@ BANNER
   font-weight: 400;
   border: none;
   line-height: normal;
+  outline: none;
 }
 .w-2 {
   margin-top: 64px;
