@@ -96,7 +96,9 @@ export default function Footer() {
                   <a href="/">Xavsizlik qoidalari</a>
                   <a href="/">Sayt xaritasi</a>
                   <a href="/">Foydalanish shartlari</a>
-                  <button className="fut-btn">Maxfiylik siyosati</button>
+                  <button className="fut-btn">
+                    Loyihani qo’llab quvvatlash
+                  </button>
                 </div>
               </div>
 
@@ -192,6 +194,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="hr-2"></div>
+          <p className="xuquq">
+            © 2023 - Tekin Market Barcha huquqlar ximoyalangan
+          </p>
         </div>
       </div>
     </div>

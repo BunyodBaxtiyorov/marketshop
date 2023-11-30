@@ -911,7 +911,7 @@ sign-up
   color: #767676;
 }
 .fut-text-2 {
-  width: 170px;
+  width: 230px;
   height: 131px;
   flex-shrink: 0;
   display: flex;
@@ -1009,6 +1009,7 @@ sign-up
 .email-help input {
   color: var(--foundation-grey-light, #e9e9e9);
   background: none;
+  border: none;
   font-family: Archivo;
   font-size: 14px;
   font-style: normal;
@@ -1017,6 +1018,7 @@ sign-up
   opacity: 0.5;
   position: relative;
   left: 10px;
+  outline: none;
 }
 .btn-help {
   width: 150px;
@@ -1025,6 +1027,17 @@ sign-up
   height: 50px;
   flex-shrink: 0;
   border-radius: 30px;
-  margin-left: 127px;
+  margin-left: 132px;
   background: var(--foundation-orange-normal, #f26957);
+}
+.xuquq {
+  color: #fff;
+  font-family: Archivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.6;
+  position: relative;
+  bottom: 100px;
 }
