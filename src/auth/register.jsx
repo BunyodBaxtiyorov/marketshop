@@ -47,9 +47,7 @@ export default function Register() {
                   <a href="/">parollni unutdingizmi</a>
                 </div>
                 <button className="all-login">
-                  <button href="/kirish" disabled>
-                    Ro'yxatdan o'tish
-                  </button>
+                  <button href="/kirish">Ro'yxatdan o'tish</button>
                 </button>
               </div>
             </div>
