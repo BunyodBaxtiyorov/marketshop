@@ -17,7 +17,7 @@ export default function Produc({ title, region, photo, dec, region1, datas }) {
 
   return (
     <div className="Produc">
-      <div className="container">
+      <div className="containerh">
         <div className="Produc-card">
           <div className="card">
             <div className="card-frame">
@@ -31,7 +31,7 @@ export default function Produc({ title, region, photo, dec, region1, datas }) {
                 <div className="list-flex">
                   <p>
                     {region}
-                    <span>{region1}</span>
+                    <span className="span-list">{region1}</span>
                   </p>
                   <p>{datas}</p>
                 </div>

@@ -361,7 +361,7 @@ Product
   gap: 48px;
 }
 .Produc-card {
-  display: flex;
+  width: 315px;
 }
 
 .Produc-card .card {
@@ -379,6 +379,11 @@ Product
   position: relative;
   left: 270px;
 }
+.soft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
 .card-frame {
   z-index: 30000;
   display: flex;
@@ -393,15 +398,22 @@ Product
   height: 164px;
 }
 .dev img {
-  width: 100%;
+  margin-bottom: 20px;
+  width: 290px;
+  height: 204px;
+  object-fit: cover;
   border-radius: 15px;
 }
-
+.span-list {
+  position: relative;
+  left: 2px;
+}
 .card-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  margin-top: 20px;
   /* background-color: green; */
 }
 .card-title h3 {
@@ -878,6 +890,7 @@ sign-up
   width: 100%;
   height: 401px;
   margin-bottom: 50px;
+  margin-top: 50px;
   border-radius: 32px;
   background: var(--foundation-grey-normal, #232323);
   padding-left: 46px;

@@ -35,17 +35,19 @@ export default function Product() {
     return (
       <div className="Produc">
         <div className="container">
-          {data?.content?.map((item) => (
-            <Produc
-              key={item.id}
-              photo={item.photos[0].filePath}
-              title={item.name}
-              dec={item.photos[0].name}
-              region={item.region.name}
-              region1={item.district.name}
-              // data={date}
-            />
-          ))}
+          <div className="soft">
+            {data?.content?.map((item) => (
+              <Produc
+                key={item.id}
+                photo={item.photos[0].filePath}
+                title={item.name}
+                dec={item.photos[0].name}
+                region={item.region.name}
+                region1={item.district.name}
+                // data={date}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
